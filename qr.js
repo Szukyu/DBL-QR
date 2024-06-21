@@ -54,17 +54,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       {input: friendInput3, display: qrDisplay3 },
     ];
 
-    fileField.addEventListener("change", async function({target}){
-     if (target.files && target.files.length) {
-          try {
-            const uploadedImageBase64 = await convertFileToBase64(target.files[0]);
-            qrField.value = uploadedImageBase64;
-          } catch(Throwable) {
-            //handle error
-          }
-        }
-    })
-
     function convertFileToBase64(file) {
       return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -86,7 +75,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     formElement.submit();
-    
+
     formElement.addEventListener('submit', (event) => {
       event.preventDefault();
 
