@@ -36,10 +36,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const fileField = document.querySelector('#qrcode');
     const qrField = document.querySelector('#qrcode_b64');
 
-    document.querySelector('[name="dbl-qr-1"]').value = "eus7pkjv";
-    document.querySelector('[name="dbl-qr-2"]').value = "ys586a77";
-    document.querySelector('[name="dbl-qr-3"]').value = "sq3k4j75";
-
     const friendInput1 = document.querySelector('[name="dbl-qr-1"]');
     const friendInput2 = document.querySelector('[name="dbl-qr-2"]');
     const friendInput3 = document.querySelector('[name="dbl-qr-3"]');
