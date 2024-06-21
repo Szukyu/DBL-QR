@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const qrDisplay3 = document.querySelector('#qr-display-3');
 
     console.log(friendInput1);
-    
+
     const szu = [
-      {input: friendInput1, display: qrDisplay1 },
-      {input: friendInput2, display: qrDisplay2 },
-      {input: friendInput3, display: qrDisplay3 },
+      {input: eus7pkjv, display: qrDisplay1 },
+      {input: ys586a77, display: qrDisplay2 },
+      {input: sq3k4j75, display: qrDisplay3 },
     ];
 
     fileField.addEventListener("change", async function({target}){
