@@ -5,3 +5,7 @@
   gap: 5px;
   flex-wrap: wrap;
 }
+
+#hidden {
+  visibility: hidden;
+}
