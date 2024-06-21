@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <title> QR Generator </title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   </head>
-  <body>
+  <body>  
+    <div class="qr-display">
+      <div id="qr-display-1"></div>
+      <div id="qr-display-2"></div>
+      <div id="qr-display-3"></div>
+    </div>
 
-    <form class="hidden" id="dbl-qr">
-      <fieldset>
+    <form id="dbl-qr">
+      <inp>
         <input type="text" minlength="8" maxlength="8" placeholder="Friend 1 ..." autocomplete="dbl-qr-1" name="dbl-qr-1" />
         <input type="text" minlength="8" maxlength="8" placeholder="Friend 2 ..." autocomplete="dbl-qr-1" name="dbl-qr-2" />
         <input type="text" minlength="8" maxlength="8" placeholder="Friend 3 ..." autocomplete="dbl-qr-1" name="dbl-qr-3" />
@@ -18,12 +23,6 @@
 
       <input type="submit" value="Display codes" />
     </form>
-  
-    <div class="qr-display">
-      <div id="qr-display-1"></div>
-      <div id="qr-display-2"></div>
-      <div id="qr-display-3"></div>
-    </div>
 
     <script type="text/javascript" src="libraries/jsqrcode/grid.js"></script>
     <script type="text/javascript" src="libraries/jsqrcode/version.js"></script>
