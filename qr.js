@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     const methodFieldset = document.querySelector('.qr-method');
 
-    const formElement = document.querySelector('.form');
+    const formElement = document.querySelector('#dbl-qr');
     const fileField = document.querySelector('#qrcode');
     const qrField = document.querySelector('#qrcode_b64');
 
@@ -48,11 +48,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const qrDisplay2 = document.querySelector('#qr-display-2');
     const qrDisplay3 = document.querySelector('#qr-display-3');
 
-    const szu = [
+    const uglyAssBitch = [
       {input: friendInput1, display: qrDisplay1 },
       {input: friendInput2, display: qrDisplay2 },
       {input: friendInput3, display: qrDisplay3 },
     ];
+
+    fileField.addEventListener("change", async function({target}){
+     if (target.files && target.files.length) {
+          try {
+            const uploadedImageBase64 = await convertFileToBase64(target.files[0]);
+            qrField.value = uploadedImageBase64;
+          } catch(Throwable) {
+            //handle error
+          }
+        }
+    })
 
     function convertFileToBase64(file) {
       return new Promise((resolve, reject) => {
@@ -80,7 +91,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       DblTimestampHelper.createDblTimestamp();
 
       if ('auto' === getSelectedGenerationmethod()) {
-        szu.forEach((friend) => {
+        uglyAssBitch.forEach((friend) => {
           if (0 === friend.input.value.length) {
             return;
           }
@@ -107,7 +118,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             return;
           }
 
-          szu.forEach((friend) => {
+          uglyAssBitch.forEach((friend) => {
             if (0 === friend.input.value.length) {
               return;
             }
