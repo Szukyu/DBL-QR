@@ -6,6 +6,6 @@
   flex-wrap: wrap;
 }
 
-#hidden {
+.hidden {
   visibility: hidden;
 }
