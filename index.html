@@ -2,45 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>slightly annoying qr shenron generator</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   </head>
   <body>
 
-    <!-- this is the start of content -->
-    <form id="dbl-qr" method="POST" action="/" enctype="multipart/form-data">
-      <fieldset class="qr-method">
-        <legend>
-          (NEW) QR generation method
-        </legend>
-
-        <input id="qr-auto" type="radio" name="qr-method" value="auto" checked />
-        <label for='qr-auto'>
-          Auto : No file needed. Might fail in some circumstances, try manual if you have an expired code message.
-        </label>
-        <br />
-
-        <input id="qr-manual" type="radio" name="qr-method" value="manual" />
-        <label for='qr-manual'>
-          Manual : Upload a recently generated code from your account (or otherwise). Use if auto fails.
-        </label>
-        <br /><br />
-
-        <label for="qrcode">Upload a recent QRcode generated with your own account :</label>
-        <input type="file" id="qrcode" name="qrcode" />
-        <input type="hidden" id="qrcode_b64" />
-      </fieldset>
-
-
+    <form class="hidden" id="dbl-qr">
       <fieldset>
-        <legend>
-          Enter up to three friend codes to generate QR codes with.
-        </legend>
-
         <input type="text" minlength="8" maxlength="8" placeholder="Friend 1 ..." autocomplete="dbl-qr-1" name="dbl-qr-1" />
         <input type="text" minlength="8" maxlength="8" placeholder="Friend 2 ..." autocomplete="dbl-qr-1" name="dbl-qr-2" />
         <input type="text" minlength="8" maxlength="8" placeholder="Friend 3 ..." autocomplete="dbl-qr-1" name="dbl-qr-3" />
@@ -48,13 +18,7 @@
 
       <input type="submit" value="Display codes" />
     </form>
-
-    <> 
-      <li> eus7pkjv </li>
-      <li> ys586a77 </li>
-      <li> sq3k4j75 </li>
-    </ul>
-    
+  
     <div class="qr-display">
       <div id="qr-display-1"></div>
       <div id="qr-display-2"></div>
@@ -78,7 +42,6 @@
     <script type="text/javascript" src="libraries/jsqrcode/findpat.js"></script>
     <script type="text/javascript" src="libraries/jsqrcode/alignpat.js"></script>
     <script type="text/javascript" src="libraries/jsqrcode/databr.js"></script>
-
     <script type="text/javascript" src="qr.js"></script>
   </body>
 </html>
