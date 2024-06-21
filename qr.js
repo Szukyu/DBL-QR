@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const qrDisplay3 = document.querySelector('#qr-display-3');
 
     console.log(friendInput1);
+    
     const szu = [
       {input: friendInput1, display: qrDisplay1 },
       {input: friendInput2, display: qrDisplay2 },
